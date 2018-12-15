@@ -1,0 +1,72 @@
+<div *ngIf="hero">
+
+    <div class="box"><img [src]="hero.heroimg" width="250" height="250"></div>
+    <h2>{{hero.name | uppercase}}</h2>
+    <div class="box">
+      <div><span>ID:<br/> </span><input [(ngModel)]="hero.id" placeholder="id" readonly></div>
+      <div>
+        <label>name:<br/>
+          <input [(ngModel)]="hero.name" placeholder="name">
+        </label>
+      </div>
+    </div>
+    <div class="box">
+      <div>
+        <label>Gender:<br/>
+          <input [(ngModel)]="hero.gender" placeholder="Gender">
+        </label>
+      </div>
+      <div>
+        <label>DOB:<br/>
+          <input [(ngModel)]="hero.dob" type='date' placeholder="DOB">
+        </label>
+      </div>
+    </div>
+
+    <br/><br/>
+
+    <div class="box">
+      <fieldset>
+        <legend class="field"><strong>Contact Info</strong></legend>
+        <div>
+          <label>E-mail:<br/>
+            <input [(ngModel)]="hero.email" placeholder="email">
+          </label>
+        </div>
+        <div>
+          <label>Phone No:<br/>
+            <input [(ngModel)]="hero.phone" placeholder="phone">
+          </label>
+        </div>
+        <div>
+          <label>Alternate No:<br/>
+            <input [(ngModel)]="hero.altno" placeholder="Alt No">
+          </label>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="box">
+      <fieldset>
+        <legend class="field"><strong>Address Info</strong></legend>
+        <div>
+          <label>City:<br/>
+            <input [(ngModel)]="hero.city" placeholder="City">
+          </label>
+        </div>
+        <div>
+          <label>Address:<br/>
+            <textarea [(ngModel)]="hero.address" placeholder="Address"></textarea>
+          </label>
+        </div>
+        <div>
+          <label>Pincode:<br/>
+            <input [(ngModel)]="hero.pincode" placeholder="Pincode">
+          </label>
+        </div>
+      </fieldset>
+    </div>
+
+
+  <button (click)="goBack()">go back</button>
+</div>

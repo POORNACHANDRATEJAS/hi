@@ -1,0 +1,92 @@
+
+<!-- <h2>My Heroes</h2>
+<div class="box">
+  <ul class="heroes">
+    <li *ngFor="let hero of heroes"
+    [class.selected]="hero === selectedHero"
+    (click)="onSelect(hero)">
+    <span class="badge">{{hero.id}}</span>  <span class="badge">{{hero.city}}</span> {{hero.name}}
+  </li>
+</ul>
+</div>
+
+<div *ngIf="selectedHero" class="inline">
+  <div class="box"><img [src]="selectedHero.heroimg" width="250" height="250"></div>
+  <h2>{{hero.name | uppercase}}</h2>
+  <div class="box">
+    <div><span>ID:<br/> </span><input [(ngModel)]="selectedHero.id" placeholder="id" readonly></div>
+    <div>
+      <label>name:<br/>
+        <input [(ngModel)]="selectedHero.name" placeholder="name">
+      </label>
+    </div>
+  </div>
+  <div class="box">
+    <div>
+      <label>Gender:<br/>
+        <input [(ngModel)]="selectedHero.gender" placeholder="Gender">
+      </label>
+    </div>
+    <div>
+      <label>DOB:<br/>
+        <input [(ngModel)]="selectedHero.dob" type='date' placeholder="DOB">
+      </label>
+    </div>
+  </div>
+
+  <br/><br/>
+
+  <div class="box">
+    <fieldset>
+      <legend class="field"><strong>Contact Info</strong></legend>
+      <div>
+        <label>E-mail:<br/>
+          <input [(ngModel)]="selectedHero.email" placeholder="email">
+        </label>
+      </div>
+      <div>
+        <label>Phone No:<br/>
+          <input [(ngModel)]="selectedHero.phone" placeholder="phone">
+        </label>
+      </div>
+      <div>
+        <label>Alternate No:<br/>
+          <input [(ngModel)]="selectedHero.altno" placeholder="Alt No">
+        </label>
+      </div>
+    </fieldset>
+  </div>
+
+  <div class="box">
+    <fieldset>
+      <legend class="field"><strong>Address Info</strong></legend>
+      <div>
+        <label>City:<br/>
+          <input [(ngModel)]="selectedHero.city" placeholder="City">
+        </label>
+      </div>
+      <div>
+        <label>Address:<br/>
+          <textarea [(ngModel)]="selectedHero.address" placeholder="Address"></textarea>
+        </label>
+      </div>
+      <div>
+        <label>Pincode:<br/>
+          <input [(ngModel)]="selectedHero.pincode" placeholder="Pincode">
+        </label>
+      </div>
+    </fieldset>
+  </div>
+
+</div>
+<div class="inline">
+  <app-hero-detail [hero]="selectedHero"></app-hero-detail>
+</div> -->
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
+  </li>
+</ul>
